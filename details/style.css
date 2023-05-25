@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "xique";
+    src: url("../assets/font/xique.ttf") format("truetype");
+}
+body {
+    font-family: "xique",sans-serif;
+}
+
+#main {
+    width: 1650px;
+    height: 920px;
+    /* background-color: bisque; */
+    margin: 0 auto;
+}
+#head{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#head .option{
+    border-bottom:1px black solid;
+}
+#tail .option{
+    border-top:1px black solid;
+}
+#body{
+    height: 720px;
+    width: 100%;
+}
+#tail{
+    height: 100px;
+    width: 100%;
+}
+#tail .option{
+    float: right;
+    transform: translateX(180%);
+}
+.option{
+    width: 260px;
+    height: 100%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.option.right{
+    align-items: flex-end;
+}
+
+.option.top{
+    justify-content: flex-end;
+}
+
+
+/* 轮播图容器样式 */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 30px auto;
+}
+
+/* 图片样式 */
+.slideshow-container .mySlides{
+    width: 100%;
+    height: auto;
+}
+
+/* 控制器样式 */
+.prev, .next {
+    position: relative;
+    width: 150px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.prev {
+
+    float: left;
+    transform: translate(-150%,-390%);
+}
+
+.next {
+    float: right;
+    transform: translate(150%,-377%);
+}

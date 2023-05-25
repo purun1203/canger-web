@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>details</title>
+</head>
+<body>
+    <div id="main">
+        <div id="head">
+            <div class="option left top" onclick="goPage()">
+                <div>返回点单 /</div>
+                <div>Return to order form</div>
+            </div>
+            <div class="option right top">
+                <div>下一道 /</div>
+                <div>Next course</div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="chart">
+                <div class="slideshow-container">
+                    <img class="mySlides" src="../assets/img/2/1.JPG" alt="Image 1">
+                    <img class="mySlides" src="../assets/img/2/2.JPG" alt="Image 2">
+                    <img class="mySlides" src="../assets/img/2/3.JPG" alt="Image 3">
+                    
+                    <img class="prev" onclick="changeSlide(-1)" src="../assets/img/icon/茶壶左.png" alt=""></a>
+                    <img class="next" onclick="changeSlide(1)" src="../assets/img/icon/茶壶.png" alt=""></a>
+                    <div id="no"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="tail">
+            <div class="option right bottom">
+                <div>菜品介绍 /</div>
+                <div>Introdution to dishes</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlide(slideIndex);
+        
+        // 切换到上一张或下一张幻灯片
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        }
+        
+        // 显示指定索引的幻灯片
+        function showSlide(n) {
+            var slides = document.getElementsByClassName("mySlides");
+            
+            // 循环播放
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            
+            // 隐藏所有幻灯片
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // 显示当前幻灯片
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function goPage() {
+            window.location.href = "../menu/menu.html";
+        }
+    </script>
+</body>
+</html>
